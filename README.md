@@ -12,7 +12,8 @@ This is a website for my full stack web development course as a project, this pr
  
 ### What does it do?
  
-This website 
+This website was made to displaying my understanding of javascript.
+I used javascript in this website page to create a simon game.
 
 ## Tech Used
 
