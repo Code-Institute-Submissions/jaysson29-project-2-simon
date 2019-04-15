@@ -3,6 +3,7 @@
 ## Overview
  
 ### Preview
+![Full Width Pics Preview](https://github.com/jaysson29/project-2-simon/blob/master/imgs/simon-preview.jpg?raw=true)
 
 **Live Preview** : [Here](https://jaysson29.github.io/project-2-simon/)
 ### What is this website for?
@@ -21,7 +22,7 @@ This website
 - [Bootstrap](http://getbootstrap.com/)
     - I use **Bootstrap** to give our project a simple, responsive layout
 - [JQuery](https://jquery.com)
-    - I **JQuery** for boostrap and displaying modal
+    - I used **JQuery** for boostrap and displaying modal
 
 ## Credits
 
