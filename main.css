@@ -6,30 +6,24 @@ body {
 
 #board {
   position: relative;
-  width: 400px;
-  height: 400px;
-  margin: 260px auto;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.20), 0 7.5px 6px rgba(0,0,0,0.12);
 }
 
-.colors {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+.planets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0 !important;
 }
 
-#green,
-#red,
-#yellow,
-#blue {
-  width: 177.5px;
-  height: 177.px;
-  cursor: pointer;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.12),inset 0 1px 2px rgba(0,0,0,0.24);
+#green, #red, #yellow, #blue {
+    height: 30%;
+    cursor: pointer;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
 }
 
 #red:hover, #red:focus {
@@ -37,6 +31,7 @@ body {
   border: 2px red solid;
   border-radius: 90px;
   box-shadow: inset 0 10px 20px rgba(0,0,0,0.25), inset 0 5px 5px rgba(0,0,0,0.22);
+  filter: brightness(200%) saturate(9);
 }
 
 #green:hover, #green:focus{
@@ -44,6 +39,7 @@ body {
   border: 2px green solid;
   border-radius: 90px;
   box-shadow: inset 0 10px 20px rgba(0,0,0,0.25), inset 0 5px 5px rgba(0,0,0,0.22);
+  filter: brightness(200%) saturate(9);
 }
 
 #yellow:hover, #yellow:focus{
@@ -51,6 +47,7 @@ body {
   border: 2px yellow solid;
   border-radius: 90px;
   box-shadow: inset 0 10px 20px rgba(0,0,0,0.25), inset 0 5px 5px rgba(0,0,0,0.22);
+  filter: brightness(200%) saturate(9);
 }
 
 #blue:hover, #blue:focus{
@@ -58,6 +55,7 @@ body {
   border: 2px blue solid;
   border-radius: 90px;
   box-shadow: inset 0 10px 20px rgba(0,0,0,0.25), inset 0 5px 5px rgba(0,0,0,0.22);
+  filter: brightness(200%) saturate(9);
 }
 
 
@@ -68,7 +66,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 10px 10px 10px 10px;
-  margin-left: 12.5px;
 }
 
 #red {
@@ -85,7 +82,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 10px 10px 10px 10px;
-  margin-left: 12.5px;
 }
 
 #blue {
@@ -97,18 +93,17 @@ body {
 }
 
 .controls {
-  width: 220px;
-  height: 220px;
-  position: absolute;
-  border: 10px solid #000000;
-  border-radius: 50%;
-  top: 90px;
-  right: 90px;
-  background-color: #D8D8D8;
+    height: 240px;
+    border: 10px solid #ffffff;
+    padding-left: 0px;
+    background-color: #000000;
+    margin: 0 auto;
+    color: white;
+    border-radius: 50px;
 }
 
 h3 {
-  margin-top: 30px !important;
+  margin-top: 0px !important;
 }
 
 #buttons {
@@ -120,23 +115,39 @@ h3 {
 }
 
 button {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #00C853;
-  margin: -3px auto 7px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00c853;
+    margin: -3px auto 7px auto;
 }
 
 button:focus {
   background-color: #00C853;
 }
 
+.switch label .lever {
+    width: 50px;
+    height: 25px;
+}
+
+.switch label .lever:after {
+    content: "";
+    width: 31px;
+    height: 31px;
+}
+
+
 #strict-label {
   margin-top: 8px;
 }
 
 p {
-  font-size: 10px;
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 2.64rem;
 }
 
 .count {
@@ -170,10 +181,10 @@ p {
   margin-bottom: 190px;
 }
 
-#msg,
-#new-game {
-  font-size: 50px;
-  font-weight: bold;
+#msg, #new-game {
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
 }
 
 #new-game {
