@@ -42,7 +42,7 @@ function planetAnimation(color) {
 
 // Strict Mode
 function checkStrict() {
-    if ($("#strict").is(":checked")){
+    if ($("#customSwitch1").is(":checked")){
       simonGame.strict = true;
     } else {
       simonGame.strict = false;
@@ -137,7 +137,7 @@ if (simonGame.playerSeq[simonGame.playerSeq.length - 1] !== simonGame.compSeq[si
 $("#new-game").click(function() {
 $("#final-screen").fadeOut("slow");
 $("#board").fadeTo("slow",1);
-$("#strict").prop("checked", false);
+$("#customSwitch1").prop("checked", false);
 resetSimonGame();
 $("#count-num").html("--");
 });

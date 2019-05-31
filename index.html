@@ -1,78 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  
+    <title>Home</title>
 </head>
-
-
 <body>
-  <div id="game">
-  <div id="board">
-    <div class="container" style="margin-top:2.5%;">
-      <div class="row planets" id="colors">
-        <div class="col s6">
-          <div id="green" onClick="addColorToPlayer(this.id)"></div>
-        </div>
-        <div class="col s6">
-          <div id="red" onClick="addColorToPlayer(this.id)"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12">
-           <div class="controls center">
-            <h3>Simon Game- Planet Version</h3>
-            <!-- Switch -->
-            <div id="buttons" class="row">
-              <div class="col s6">
-                <button id="start" class="z-depth-1"></button>
-              </div>
-              <!-- gameplay mode -->
-              <div class="col s6">
-                <div class="switch">
-                  <label>
-                    <input type="checkbox" id="strict">
-                    <span class="lever"></span>
-                  </label>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="Home">
+      <a class="navbar-brand center w100" href="#"><i class="fa fa-globe"></i><i class="fa fa-gamepad"></i> Planet Simon Game <i class="fa fa-gamepad"></i><i class="fa fa-globe"></i></a>
+    </nav>
+    
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w100">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm navButton1">
+                  <li class="nav-item active" style="background-color: #343a40;">
+                    <a class="nav-link center navText1" href="#Home"><i class="fa fa-home"></i> Home</a>
+                  </li>
+                </div>
+                <div class="col-sm navButton1">
+                  <li class="nav-item" style="background-color: darkblue;">
+                    <a class="nav-link center navText1" href="#Score"><i class="fa fa-star"></i> Scores</a>
+                  </li>
+                </div>
+                <div class="col-sm navCenter">
+                  
+                </div>
+                <div class="col-sm navButton2">
+                  <li class="nav-item" style="background-color: darkred;">
+                    <a class="nav-link center navText2" href="#About"><i class="fa fa-question-circle"></i> About</a>
+                  </li>
+                </div>
+                <div class="col-sm navButton2">
+                  <li class="nav-item" style="background-color: darkgreen;">
+                    <a class="nav-link center navText2" href="simon.html"><i class="fa fa-play"></i> Play</a>
+                  </li>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col s6 labels">
-                <p>START</p>
-              </div>
-              <div class="col s6 labels">
-                <p id="strict-label">STRICT</p>
-              </div>
-            </div>
-            <div class="count">
-              <h5 id="count-num">--</h5>
-            </div>
-          </div>
-        </div>
+        </ul>
       </div>
+    </nav>
+    
+    <div class="container Main-Container">
       <div class="row">
-        <div class="col s6">
-          <div id="yellow" onClick="addColorToPlayer(this.id)"></div>
+        <div class="col-sm">
+          <img class="h100 w100" src="/imgs/green.png"></img>
         </div>
-        <div class="col s6">
-          <div id="blue" onClick="addColorToPlayer(this.id)"></div>
+        <div class="col-sm">
+          <img class="h100 w100" src="/imgs/red.png"></img>
+        </div>
+        <div class="col-sm">
+          <img class="h100 w100" src="/imgs/sun.png"></img>
+        </div>
+        <div class="col-sm">
+          <img class="h100 w100" src="/imgs/earth.png"></img>
         </div>
       </div>
     </div>
     
-  </div>
-  <div id="final-screen" class="hidden">
-    <div id="msg"></div>
-    <br>
-    <a href="#" id="new-game">Play Again</a>
-  </div>
-  </div>
-
-  <!-- scripts -->
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-  <script src="/js/simon.js"></script>
+    <div class="jumbotron Score-jumbotron bg-dark" style="color: white;" id="Score">
+      <h1 class="display-4 center">Scores</h1>
+      <hr class="my-4">
+      <p class="lead center">This is the score board for high scores</p>
+      <table class="w100 center">
+        <tr>
+          <th>Place</th> 
+          <th>UserName</th>
+          <th>Score</th>
+        </tr>
+        <tr>
+          <td>1</td> 
+          <td>Jaysson29</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jaysson29</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Jaysson29</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Jaysson29</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Jaysson29</td>
+          <td>6</td>
+        </tr>
+      </table>
+      <hr class="my-4">
+      <p class="lead center">This has not been intergrated to the game yet but will be soon...</p>
+    </div>
+    
+    <div class="jumbotron About-jumbotron bg-dark" style="color: white;" id="About">
+      <h1 class="display-4 center">About</h1>
+      <hr class="my-4">
+      <p class="lead center">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <p class="center">It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <hr class="my-4">
+      <h1 class="display-4 center">How To Play</h1>
+      <hr class="my-4">
+      <p class="lead center">This Is A Simple JavaScript Game</p>
+      <p class="center">It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <ul>
+        <li>Click start on the game to begin playing</li>
+        <li><i class="fa fa-mouse-pointer"></i></li>
+      </ul>
+    </div>
+    
+    
+    <footer class="footer">
+      <div class="container">
+        <p class="m-0 text-center text-white play" >Copyright &copy; Jason Bishop 2019</p>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <!-- Face book icon -->
+            <div class="col-sm-1">
+              <a class="socailIcons" href="https://www.facebook.com/"><i class="fa fa-facebook fa-2x"></i></a>
+            </div>
+            <!-- twitter icon -->
+            <div class="col-sm-1">
+              <a class="socailIcons" href="https://twitter.com/"><i class="fa fa-twitter-square fa-2x"></i></a>
+            </div>
+            <!-- youtube icon -->
+            <div class="col-sm-1">
+              <a class="socailIcons" href="https://www.youtube.com/"><i class="fa fa-youtube-square fa-2x"></i></a>
+            </div>
+            <!-- GitHub icon -->
+            <div class="col-sm-1">
+              <a class="socailIcons" href="https://github.com/"><i class="fa fa-github-square fa-2x"></i></a>
+            </div>
+            <!-- Wikipedia icon -->
+            <div class="col-sm-1">
+              <a class="socailIcons" href="https://en.wikipedia.org/"><i class="fa fa-wikipedia-w fa-2x"></i></a>
+            </div>
+            <!-- Google icon -->
+            <div class="col-sm-1">
+              <a class="socailIcons" href="https://www.google.co.uk/"><i class="fa fa-google fa-2x"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
 </body>
+</html>

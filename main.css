@@ -4,11 +4,134 @@ body {
   background-color: black;
 }
 
-#board {
-  position: relative;
+
+/*---Main---*/
+
+/*--Nav-Bars--*/
+.fixed-bottom {
+    padding: 0 !important;
+    font-size: 40px;
+    background-color: transparent !important;
+}
+
+.navbar-brand{
+  font-size: 50px;
+}
+
+.fa-globe{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.navButton1{
+  transform: skewX(-25deg);
+  padding: 0 !important;
+}
+
+.navButton2{
+  transform: skewX(25deg);
+  padding: 0 !important;
+}
+
+.navText1{
+  transform: skewX(25deg);
+}
+
+.navText2{
+  transform: skewX(-25deg);
+}
+
+.nav-item{
+  border: 5px inset rgba(0,0,0,0.25);
+  transition: border 1s ease-out;
+}
+
+.nav-link{
+  color: black !important;
+  transition: color 1s ease-out;
+}
+
+.nav-link:hover{
+  color: white !important;
+}
+
+.nav-item:hover {
+  border: 5px inset white;
+}
+
+.navCenter{
+    width: 10% !important;
+    max-width: 4%;
+    background: #343a40;
+    position: initial;
+    transform: scaleX(2);
+    z-index: -9;
+}
+
+/*--Main-Page--*/
+
+.Main-Container {
+  height: 620px;
+  margin-top: 60px;
+  padding: 0;
+}
+
+.Score-jumbotron{
+  margin-top: 200px;
+}
+
+.About-jumbotron{
+  margin-top: 200px;
+  margin-bottom: 55px;
+}
+
+/*--Presets--*/
+
+.center{
+  text-align: center;
+}
+
+.w100{
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.20), 0 7.5px 6px rgba(0,0,0,0.12);
+}
+
+.h100{
+  height: 100%;
+}
+
+.socailIcons{
+  color: #767676;
+  font-size: 25px;
+}
+
+.footer{
+  height: 250px;
+}
+
+
+/*--Simon-Game--*/
+
+.controls-container {
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    max-width: unset;
+}
+
+.controls {
+    height: 240px;
+    width: 70%;
+    border: 2.5px solid #ffffff;
+    padding-left: 0px;
+    background-color: #000000;
+    margin: 0 auto;
+    color: white;
+    border-radius: 30px;
+}
+
+.start-btn{
+  width: 150px;
+  font-size: 25px;
 }
 
 .planets {
@@ -18,10 +141,23 @@ body {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 0 !important;
+    height: 350px;
+}
+
+.planet{
+  width: 350px;
+  margin: auto !important;
+}
+
+#board {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.20), 0 7.5px 6px rgba(0,0,0,0.12);
 }
 
 #green, #red, #yellow, #blue {
-    height: 30%;
+    height: 100%;
     cursor: pointer;
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
 }
@@ -29,7 +165,7 @@ body {
 #red:hover, #red:focus {
   opacity: 0.8;
   border: 2px red solid;
-  border-radius: 90px;
+  border-radius: 160px;
   box-shadow: inset 0 10px 20px rgba(0,0,0,0.25), inset 0 5px 5px rgba(0,0,0,0.22);
   filter: brightness(200%) saturate(9);
 }
@@ -37,7 +173,7 @@ body {
 #green:hover, #green:focus{
   opacity: 0.8;
   border: 2px green solid;
-  border-radius: 90px;
+  border-radius: 160px;
   box-shadow: inset 0 10px 20px rgba(0,0,0,0.25), inset 0 5px 5px rgba(0,0,0,0.22);
   filter: brightness(200%) saturate(9);
 }
@@ -45,7 +181,7 @@ body {
 #yellow:hover, #yellow:focus{
   opacity: 0.8;
   border: 2px yellow solid;
-  border-radius: 90px;
+  border-radius: 160px;
   box-shadow: inset 0 10px 20px rgba(0,0,0,0.25), inset 0 5px 5px rgba(0,0,0,0.22);
   filter: brightness(200%) saturate(9);
 }
@@ -53,17 +189,15 @@ body {
 #blue:hover, #blue:focus{
   opacity: 0.8;
   border: 2px blue solid;
-  border-radius: 90px;
+  border-radius: 160px;
   box-shadow: inset 0 10px 20px rgba(0,0,0,0.25), inset 0 5px 5px rgba(0,0,0,0.22);
   filter: brightness(200%) saturate(9);
 }
 
-
-
 #green {
   background-image: url("imgs/green.png");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   margin: 10px 10px 10px 10px;
 }
@@ -71,7 +205,7 @@ body {
 #red {
   background-image: url("imgs/red.png");
   background-position: center;
-  background-size:  cover;
+  background-size:  contain;
   background-repeat: no-repeat;
   margin: 10px 10px 10px 10px;
 }
@@ -79,7 +213,7 @@ body {
 #yellow {
   background-image: url("imgs/sun.png");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   margin: 10px 10px 10px 10px;
 }
@@ -87,19 +221,9 @@ body {
 #blue {
   background-image: url("imgs/earth.png");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   margin: 10px 10px 10px 10px;
-}
-
-.controls {
-    height: 240px;
-    border: 10px solid #ffffff;
-    padding-left: 0px;
-    background-color: #000000;
-    margin: 0 auto;
-    color: white;
-    border-radius: 50px;
 }
 
 h3 {
@@ -126,15 +250,73 @@ button:focus {
   background-color: #00C853;
 }
 
-.switch label .lever {
-    width: 50px;
-    height: 25px;
+/*--Switch-Strict--*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: -80px;
 }
 
-.switch label .lever:after {
-    content: "";
-    width: 31px;
-    height: 31px;
+.switch-label{
+  position: absolute;
+  margin-left: 40px;
+  width: 100%;
+  inline-size: max-content;
+  top: 3px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 
@@ -155,7 +337,7 @@ h5 {
   height: 35px;
   border: 2px solid #000000;
   border-radius: 20px;
-  margin: -24px auto 0 auto !important;
+  margin: 10px auto 50px auto !important;
   color: #F44336;
   background-color: #000000;
 }
