@@ -105,7 +105,8 @@ function checkPlayerMove(color) {
 if (simonGame.playerSeq[simonGame.playerSeq.length - 1] !== simonGame.compSeq[simonGame.playerSeq.length - 1]) {
   planetSounds(color);
   if (simonGame.strict === true) {
-    $("#msg").text("You lost!");
+    $("#msg").text("Wrong Move");
+    $("#msg2").text("Your Score : " + simonGame.count);
     $("#board").fadeOut("slow");
     $("#final-screen").fadeTo("slow",1);
   } else {
@@ -123,6 +124,7 @@ if (simonGame.playerSeq[simonGame.playerSeq.length - 1] !== simonGame.compSeq[si
   if (checkCorrect) {
     if (simonGame.count === 20) {
       $("#msg").text("You won!");
+      $("#msg2").text("Your Score : " + simonGame.count);
       $("#board").fadeOut("slow");
       $("#final-screen").fadeTo("slow",1);
     } else {

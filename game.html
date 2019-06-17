@@ -10,65 +10,66 @@
 
 <body>
   <div id="game">
-  <div id="board">
-    <div class="container" style="margin-top:2.5%;">
-      <div class="row planets" id="colors">
-        <div class="col s6">
-          <div id="green" onClick="addColorToPlayer(this.id)"></div>
+    <div id="board">
+      <div class="container" style="margin-top:2.5%;">
+        <div class="row planets" id="colors">
+          <div class="col s6">
+            <div id="green" onClick="addColorToPlayer(this.id)"></div>
+          </div>
+          <div class="col s6">
+            <div id="red" onClick="addColorToPlayer(this.id)"></div>
+          </div>
         </div>
-        <div class="col s6">
-          <div id="red" onClick="addColorToPlayer(this.id)"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12">
-           <div class="controls center">
-            <h3>Simon Game- Planet Vers</h3>
-            <!-- Switch -->
-            <div id="buttons" class="row">
-              <div class="col s6">
-                <button id="start" class="z-depth-1"></button>
-              </div>
-              <!-- gameplay mode -->
-              <div class="col s6">
-                <div class="switch">
-                  <label>
-                    <input type="checkbox" id="strict">
-                    <span class="lever"></span>
-                  </label>
+        <div class="row">
+          <div class="col s12">
+             <div class="controls center">
+              <h3>Simon Game- Planet Vers</h3>
+              <!-- Switch -->
+              <div id="buttons" class="row">
+                <div class="col s6">
+                  <button id="start" class="z-depth-1"></button>
+                </div>
+                <!-- gameplay mode -->
+                <div class="col s6">
+                  <div class="switch">
+                    <label>
+                      <input type="checkbox" id="strict">
+                      <span class="lever"></span>
+                    </label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col s6 labels">
-                <p>START</p>
+              <div class="row">
+                <div class="col s6 labels">
+                  <p>START</p>
+                </div>
+                <div class="col s6 labels">
+                  <p id="strict-label">STRICT</p>
+                </div>
               </div>
-              <div class="col s6 labels">
-                <p id="strict-label">STRICT</p>
+              <div class="count">
+                <h5 id="count-num">--</h5>
               </div>
-            </div>
-            <div class="count">
-              <h5 id="count-num">--</h5>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col s6">
-          <div id="yellow" onClick="addColorToPlayer(this.id)"></div>
+        <div class="row">
+          <div class="col s6">
+            <div id="yellow" onClick="addColorToPlayer(this.id)"></div>
+          </div>
+          <div class="col s6">
+            <div id="blue" onClick="addColorToPlayer(this.id)"></div>
+          </div>
         </div>
-        <div class="col s6">
-          <div id="blue" onClick="addColorToPlayer(this.id)"></div>
-        </div>
       </div>
+      
     </div>
-    
-  </div>
-  <div id="final-screen" class="hidden">
-    <div id="msg"></div>
-    <br>
-    <a href="#" id="new-game">Play Again</a>
-  </div>
+    <div id="final-screen" class="hidden">
+      <div id="msg"></div>
+      <div id="msg2"></div>
+      <br>
+      <a href="#" id="new-game">Play Again</a>
+    </div>
   </div>
 
   <!-- scripts -->

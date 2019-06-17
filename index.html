@@ -3,16 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Vender/fontawesome-free-5.9.0-web/css/all.css" rel="stylesheet"> 
+    <script defer src="/Vender/fontawesome-free-5.9.0-web/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
   
     <title>Home</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="Home">
-      <a class="navbar-brand center w100" href="#"><i class="fa fa-globe"></i><i class="fa fa-gamepad"></i> Planet Simon Game <i class="fa fa-gamepad"></i><i class="fa fa-globe"></i></a>
+      <a class="navbar-brand center w100" href="#"><i class="fas fa-globe-europe"></i> <i class="fa fa-gamepad"></i> Planet Simon Game <i class="fa fa-gamepad"></i> <i class="fas fa-globe-europe"></i></a>
     </nav>
     
     <nav class="navbar fixed-bottom navbar-expand-lg navbar-light">
@@ -56,21 +58,37 @@
       <div class="row">
         <div class="col-sm">
           <img class="h100 w100" src="/imgs/green.png"></img>
+          <div class="planetBoxGreen">
+            <h1 class="planetName">Green Planet</h1>
+          </div>
         </div>
         <div class="col-sm">
           <img class="h100 w100" src="/imgs/red.png"></img>
+          <div class="planetBoxRed">
+            <h1 class="planetName">Red Plant</h1>
+          </div>
         </div>
         <div class="col-sm">
           <img class="h100 w100" src="/imgs/sun.png"></img>
+          <div class="planetBoxYellow">
+            <h1 class="planetName">Yellow Sun</h1>
+          </div>
         </div>
         <div class="col-sm">
           <img class="h100 w100" src="/imgs/earth.png"></img>
+          <div class="planetBoxBlue">
+            <h1 class="planetName">Blue Earth</h1>
+          </div>
         </div>
       </div>
     </div>
     
     <div class="jumbotron Score-jumbotron bg-dark" style="color: white;" id="Score">
-      <h1 class="display-4 center">Scores</h1>
+      <h1 class="display-4 center">
+        <i class="fas fa-star"></i>
+        Scores 
+        <i class="fas fa-star"></i>
+      </h1>
       <hr class="my-4">
       <p class="lead center">This is the score board for high scores</p>
       <table class="w100 center">
@@ -110,18 +128,109 @@
     </div>
     
     <div class="jumbotron About-jumbotron bg-dark" style="color: white;" id="About">
-      <h1 class="display-4 center">About</h1>
+      <h1 class="display-4 center">
+        <i class="far fa-question-circle"></i>
+        About
+        <i class="far fa-question-circle"></i>
+      </h1>
       <hr class="my-4">
-      <p class="lead center">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <p class="center">It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <div class="row">
+        <div class="col">
+          <p class="lead center">This is a simple JavaScript Simon Game.</p>
+          <p class="center">The Tech I Used : </p>
+          <p class="center" style="font-size: 40px; !important">
+            <i class="fab fa-html5"></i> Html 5
+            <i class="fab fa-css3-alt"></i> CSS 3
+            <i class="fab fa-js"></i> JavaScipt
+          </p>
+        </div>
+        <div class="col">
+          <p class="center">About Simon Game : </p>
+          <p class="center">
+            Simon is an electronic game of memory skill invented by Ralph H. Baer and Howard J. Morrison, 
+            working for toy design firm Marvin Glass and Associates, 
+            with software programming by Lenny Cope. 
+            The device creates a series of tones and lights and requires a user to repeat the sequence
+            ( <a href="https://en.wikipedia.org/wiki/Simon_(game)" class="">Find Out More Here !</a> ).
+            I Have Created A JavaScipt Version Which Uses The Same Algorithm. 
+            I Used Colored Planets Instead Of Just Color To Make It Unique.
+            
+          </p>
+        </div>
+      </div>
       <hr class="my-4">
-      <h1 class="display-4 center">How To Play</h1>
+      <h1 class="display-4 center">
+        <i class="fas fa-question"></i>
+        How To Play
+        <i class="fas fa-question"></i>
+      </h1>
       <hr class="my-4">
-      <p class="lead center">This Is A Simple JavaScript Game</p>
-      <p class="center">It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <ul>
-        <li>Click start on the game to begin playing</li>
-        <li><i class="fa fa-mouse-pointer"></i></li>
+      <ul class="howTo">
+        <li>
+          Click 
+          <i class="fa fa-play"></i> 
+          Play On The HomePage To Take You To The Game.
+        </li>
+        <li>
+          Click Start On The Game Board 
+          <i class="fas fa-chalkboard-teacher"></i> 
+          To Begin Playing.
+        </li>
+        <li>
+          If You Want To Play Strict Mode (Read More In About Section) Use The Toggle 
+          <i class="fa fa-toggle-on"></i> 
+          To Enable or Disable Strict Mode.
+        </li>
+        <li>
+          When The Game Starts It Will Randomly Select A Colored Planet 
+          <i class="fas fa-globe-europe"></i>
+          (
+          <i class="fa fa-square" style="color:green"></i> Green
+          <i class="fa fa-square" style="color:red"></i> Red
+          <i class="fa fa-square" style="color:yellow"></i> Yellow
+          <i class="fa fa-square" style="color:blue"></i> Blue
+          )
+          As The Starting Point.
+        </li>
+        <li>
+          When A Color Is Selected, It will Flash <i class="fas fa-traffic-light"></i> 
+          With A Brighter Version Of The Color With A Outline <i class="far fa-dot-circle"></i>
+          And Will Make A Unique Sound <i class="fa fa-volume-up"></i> To define Each Color.
+        </li>
+        <li>
+          Use Your Mouse Pointer <i class="fa fa-mouse-pointer"></i> To Select The Color You Seen To Go To The Next Round.
+        </li>
+        <li>
+          Every Round Will Increases The Amount Of Color's In The Sequence, For Example;
+          <i class="fa fa-square" style="color:green"></i> ,
+          <i class="fa fa-square" style="color:green"></i> ,
+          <i class="fa fa-square" style="color:yellow"></i> ,
+          <i class="fa fa-square" style="color:blue"></i> ...
+          And The Score Will Increase As Well By 1.
+        </li>
+        <li>
+          Make Sure After Every Selection You Center The Cursor So The Sequence Can Be Seen Clearly, 
+          If The Cursor Is Hovering Over A Color/Planet It Will Override The Sequence And You Will Not Be Able To Continue.
+        </li>
+        <li>
+          Make Sequence Number Is Currently Set At 20.
+        </li>
+        <li>
+          Finally Have Fun.
+          <i class="far fa-smile-beam"></i>
+        </li>
+        <p class="center"></p>
+        <hr class="my-4">
+        <p class="center">
+          <i class="fas fa-exclamation"></i> 
+          Try And Get The Highest Score, If Your Dare 
+          <i class="fas fa-exclamation"></i>
+        </p>
+        <p class="display-4 center">
+          <i class="fas fa-thumbs-up"></i>
+          Have Fun And Good Luck 
+          <i class="fas fa-thumbs-up"></i>
+        </p>
       </ul>
     </div>
     
@@ -135,36 +244,36 @@
             <div class="col-sm-3"></div>
             <!-- Face book icon -->
             <div class="col-sm-1">
-              <a class="socailIcons" href="https://www.facebook.com/"><i class="fa fa-facebook fa-2x"></i></a>
+              <a class="socailIcons" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
             </div>
             <!-- twitter icon -->
             <div class="col-sm-1">
-              <a class="socailIcons" href="https://twitter.com/"><i class="fa fa-twitter-square fa-2x"></i></a>
+              <a class="socailIcons" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
             </div>
             <!-- youtube icon -->
             <div class="col-sm-1">
-              <a class="socailIcons" href="https://www.youtube.com/"><i class="fa fa-youtube-square fa-2x"></i></a>
+              <a class="socailIcons" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square fa-2x"></i></a>
             </div>
             <!-- GitHub icon -->
             <div class="col-sm-1">
-              <a class="socailIcons" href="https://github.com/"><i class="fa fa-github-square fa-2x"></i></a>
+              <a class="socailIcons" href="https://github.com/" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
             </div>
             <!-- Wikipedia icon -->
             <div class="col-sm-1">
-              <a class="socailIcons" href="https://en.wikipedia.org/"><i class="fa fa-wikipedia-w fa-2x"></i></a>
+              <a class="socailIcons" href="https://en.wikipedia.org/" target="_blank"><i class="fab fa-wikipedia-w fa-2x"></i></a>
             </div>
             <!-- Google icon -->
             <div class="col-sm-1">
-              <a class="socailIcons" href="https://www.google.co.uk/"><i class="fa fa-google fa-2x"></i></a>
+              <a class="socailIcons" href="https://www.google.co.uk/" target="_blank"><i class="fab fa-google fa-2x"></i></a>
             </div>
           </div>
         </div>
       </div>
     </footer>
     
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/scroll.js"></script>
 </body>
 </html>
