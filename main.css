@@ -437,6 +437,9 @@ h5 {
    width: 100%;
 }
 
+
+/*--MEDIA-QUERIES--*/
+
 @media screen and (max-width: 768px) {
   .fixed-bottom {
     background-color: #343a40 !important;
@@ -449,5 +452,24 @@ h5 {
   .navbar-light .navbar-toggler {
     height: 80px;
     width: 100px;
+  }
+  
+  .nav-link {
+    font-size: 35px;
+  }
+  
+  .icon-media-q {
+    width: 100% !important;
+  }
+  
+  .navCenter {
+    max-width: 8% !important;
+  }
+  
+  .controls {
+    height: 40%;
+    width: 280%;
+    margin-left: -400px;
+    margin-top: 460px;
   }
 }
