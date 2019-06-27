@@ -20,6 +20,8 @@ I used javascript in this website page to create a simon game.
   - Base languages used to create website
 - [Bootstrap](http://getbootstrap.com/)
     - I use **Bootstrap** to give our project a simple, responsive layout
+- [FontAwesome](https://fontawesome.com/)
+    - I use **FontAwesome** For the visual Icon around the Website to make more appealing and easier to understand
 - [JQuery](https://jquery.com)
     - I used **JQuery** for boostrap and displaying modal
 
@@ -66,12 +68,12 @@ git clone https://github.com/jaysson29/project-2-simon.git
 ```
 
 2. Or Fork or Download it From
-```GitHub
+```console
 https://github.com/jaysson29/project-2-simon
 ```
 
 3. Running The project
-```Run
+```console
 Open index.html
 ```
 
