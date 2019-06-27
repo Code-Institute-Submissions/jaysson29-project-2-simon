@@ -440,9 +440,53 @@ h5 {
 
 /*--MEDIA-QUERIES--*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px){
+  .controls-container {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    max-width: unset;
+  }
   .fixed-bottom {
     background-color: #343a40 !important;
+  }
+  
+  .icon-media-q {
+    width: 100% !important;
+  }
+  
+  .nav-link {
+    font-size: 50px;
+  }
+  
+  .nav-item {
+    width: 100vw;
+    margin-left: -12.5vw;
+  }
+  
+  .navbar-toggler-icon {
+    font-size: 50px;
+  }
+  
+  .navbar-light .navbar-toggler {
+    height: 80px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*--Home-Page--*/
+  
+  .nav-item {
+    margin-left: 0 !important;
+  }
+  
+  .fixed-bottom {
+    background-color: #343a40 !important;
+  }
+  
+  .navbar-brand {
+    font-size: 25px;
   }
   
   .navbar-toggler-icon {
@@ -471,5 +515,206 @@ h5 {
     width: 280%;
     margin-left: -400px;
     margin-top: 460px;
+  }
+  
+  .Main-Container {
+    height: 100%;
+  }
+  
+  .p-mobile {
+    margin-bottom: 100px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .m-row {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .planetBoxGreen {
+    position: absolute;
+    margin-top: 0px;
+    width: 98%;
+  }
+  
+  .planetBoxRed {
+    position: absolute;
+    margin-top: 0px;
+    width: 98%;
+  }
+  
+  .planetBoxBlue {
+    position: absolute;
+    margin-top: 0px;
+    width: 98%;
+  }
+  
+  .planetBoxYellow {
+    position: absolute;
+    margin-top: 0px;
+    width: 98%;
+  }
+  
+  .display-4 {
+    font-size: 1.5rem;
+  }
+  
+  .howTo {
+    list-style-type: decimal;
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 15px;
+  }
+  
+  .tech {
+    font-size: 20px;
+  }
+  
+  /*--Game--*/
+  
+  .controls {
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  .planet {
+    width: 100% !important;
+    height: 170px !important;
+  }
+  
+  .controls-container {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: unset;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  /*--Home-Page--*/
+  
+  .nav-item {
+    margin-left: 0 !important;
+  }
+  
+  .fixed-bottom {
+    background-color: #343a40 !important;
+  }
+  
+  .navbar-brand {
+    font-size: 25px;
+  }
+  
+  .navbar-toggler-icon {
+    font-size: 50px;
+  }
+  
+  .navbar-light .navbar-toggler {
+    height: 80px;
+    width: 100px;
+  }
+  
+  .nav-link {
+    font-size: 35px;
+  }
+  
+  .icon-media-q {
+    width: 100% !important;
+  }
+  
+  .navCenter {
+    max-width: 8% !important;
+  }
+  
+  .controls {
+    height: 40%;
+    width: 280%;
+    margin-left: -400px;
+    margin-top: 460px;
+  }
+  
+  .Main-Container {
+    height: 100%;
+  }
+  
+  .p-mobile {
+    margin-bottom: 100px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .m-row {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .planetBoxGreen {
+    position: absolute;
+    margin-top: 0px;
+    width: 98%;
+  }
+  
+  .planetBoxRed {
+    position: absolute;
+    margin-top: 0px;
+    width: 98%;
+  }
+  
+  .planetBoxBlue {
+    position: absolute;
+    margin-top: 0px;
+    width: 98%;
+  }
+  
+  .planetBoxYellow {
+    position: absolute;
+    margin-top: 0px;
+    width: 98%;
+  }
+  
+  .display-4 {
+    font-size: 1.5rem;
+  }
+  
+  .howTo {
+    list-style-type: decimal;
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 15px;
+  }
+  
+  .tech {
+    font-size: 20px;
+  }
+  
+  /*--Game--*/
+  
+  .controls {
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  .planet {
+    width: 100% !important;
+    height: 170px !important;
+  }
+  
+  .controls-container {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: unset;
   }
 }
